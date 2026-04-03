@@ -1,0 +1,13 @@
+def number():
+    while True: 
+        try: 
+            num = int(input('Input any number: ')) 
+            if num > 7:
+                print("Hello")
+                break 
+            else:
+                print("Oops..You can try again.")
+        except ValueError:
+            print("Only numbers are allowed. Try again.")
+
+number()
