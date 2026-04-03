@@ -1,0 +1,6 @@
+Given bracket sequence: [((())()(())]] 
+this sequence isn't correct
+
+
+[((())()(()))]
+we can replace the penultimate square bracket with a parentheses
