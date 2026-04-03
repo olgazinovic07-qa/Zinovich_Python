@@ -11,3 +11,45 @@ def number():
             print("Only numbers are allowed. Try again.")
 
 number()
+
+def name():
+    while True:
+        line = input("Please, enter any name: ").strip() 
+        if not line.replace(" ", "").isalpha():
+            print("Only letters are allowed.")
+            continue 
+            
+        names_list = line.split()
+    
+        found_johns = [n for n in names_list if n.capitalize() == 'John']
+        
+        if found_johns:
+            for j in found_johns:
+                print(f"Hello, {j.capitalize()}")
+            break
+        else:
+            print("Sorry,try again.")
+
+name()
+
+def numeric_array():
+    while True:
+        user_input = input("Please, enter any numbers separated by a space: ").strip()
+        
+        if not user_input:
+            print("Your input is empty. Try again")
+            continue
+
+        try:
+            array = [int(x) for x in user_input.split()]
+            result_array = [x for x in array if x % 3 == 0]
+            
+            if len(result_array) > 0:
+                print(result_array)
+            else:
+                print("Sorry, there are no such numbers.")
+            break 
+        except ValueError:
+            print("Only numbers separated by a space are allowed.")
+
+numeric_array()
